@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/hc_background"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⏱️ Chronomètre Service"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/hc_primary"
+        android:gravity="center"
+        android:paddingBottom="32dp"/>
+
+    <!-- Affichage temps -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:id="@+id/tvTemps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            android:textColor="@color/hc_primary"
+            android:padding="32dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bouton Démarrer -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="▶️ DÉMARRER SERVICE"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/hc_success"
+        style="@style/Widget.MaterialComponents.Button"/>
+
+    <!-- Bouton Arrêter -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⏹️ ARRÊTER SERVICE"
+        android:textSize="16sp"
+        android:backgroundTint="@color/hc_error"
+        style="@style/Widget.MaterialComponents.Button"/>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service arrêté"
+        android:textSize="14sp"
+        android:textColor="@color/hc_text_dark"
+        android:gravity="center"
+        android:paddingTop="16dp"/>
+
+</LinearLayout>
